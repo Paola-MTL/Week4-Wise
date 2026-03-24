@@ -5,6 +5,21 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Primitive palette (Figma) — grey / green; brand aliases reference these */
+  --color-primitive-grey-950: var(--primitive-grey-950);
+  --color-primitive-grey-600: var(--primitive-grey-600);
+  --color-primitive-grey-200: var(--primitive-grey-200);
+  --color-primitive-grey-50: var(--primitive-grey-50);
+  --color-primitive-grey-0: var(--primitive-grey-0);
+  --color-primitive-grey-overlay: var(--primitive-grey-overlay);
+  --color-primitive-green-950: var(--primitive-green-950);
+  --color-primitive-green-400: var(--primitive-green-400);
+  --color-primitive-green-100: var(--primitive-green-100);
+  --color-primitive-brand-ink: var(--primitive-brand-ink);
+  --color-primitive-brand-deep: var(--primitive-brand-deep);
+  --color-primitive-brand-bright: var(--primitive-brand-bright);
+  --color-primitive-brand-soft: var(--primitive-brand-soft);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -58,7 +73,28 @@
    — --radius: default border radius (buttons, cards, inputs)
    — --sidebar-*: sidebar-specific colours
    ========================================================================== */
+
+/* Primitive colours (light & dark): source hex from design; use semantic theme vars for UI. */
 :root {
+  /* Grey — neutrals + white + scrim */
+  --primitive-grey-950: #0b0c0a;
+  --primitive-grey-600: #5a5e58;
+  --primitive-grey-200: #d7d8d2;
+  --primitive-grey-50: #ecede8;
+  --primitive-grey-0: #ffffff;
+  --primitive-grey-overlay: rgb(0 0 0 / 15%);
+
+  /* Green — dark → bright → tint */
+  --primitive-green-950: #163300;
+  --primitive-green-400: #9ee770;
+  --primitive-green-100: #d6f9ce;
+
+  /* Brand — same inks & greens, named for product / marketing usage */
+  --primitive-brand-ink: var(--primitive-grey-950);
+  --primitive-brand-deep: var(--primitive-green-950);
+  --primitive-brand-bright: var(--primitive-green-400);
+  --primitive-brand-soft: var(--primitive-green-100);
+
   --radius: 0.625rem;
   --background: #ffffff;
   --foreground: #252525;
